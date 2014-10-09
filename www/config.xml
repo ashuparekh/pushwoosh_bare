@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.hello-world"
+        id        = "com.phonegap.hello"
         version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>Hello</name>
 
     <description>
-        Hello World sample application with Pushwoosh Phonegap push notifications plugin integrated
+        Hello World 
     </description>
 
     <author href="http://pushwoosh.com" email="support@pushwoosh.com">
@@ -24,6 +24,8 @@
         The "device" permission is required for the 'deviceready' event.
     -->
     <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
 
     <!--
         If you do not want any permissions to be added to your app, add the
@@ -55,6 +57,7 @@
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
     <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
+
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
@@ -92,7 +95,7 @@
 
         Otherwise, you can specify specific domains:
     -->
-    <access origin="http://127.0.0.1*"/> <!-- allow local pages -->
+    <access origin="*"/> <!-- allow local pages -->
     <access origin="https://cp.pushwoosh.com"/>
     <!--
         <access origin="http://phonegap.com" />                    - allow any secure requests to http://phonegap.com/
